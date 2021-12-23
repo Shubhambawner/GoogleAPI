@@ -53,6 +53,12 @@
             console.log(url)
             fetch(url)
                 .then((r) => console.log(r))
+                .then(()=>{
+                    allert("Your responce has been submitted successfully!!");
+                    document.getElementById("nm").value=""
+                    document.getElementById("ee").value=""
+                    document.getElementById("nn").value=""
+                })
         }
     </script>
 </body>
