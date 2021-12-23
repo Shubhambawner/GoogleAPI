@@ -14,26 +14,27 @@
 <body>
 
 
-    <div style="width: 80%;margin: 10%">
+    <div style="width: 80%;margin: 8%;padding: 1%; background:rgb(156, 205, 233)">
         <div class="form-group">
-            <label >Name</label>
-            <input class="form-control" id="nm" >
+            <label>Name</label>
+            <input class="form-control" id="nm">
             <small id="emailHelp" class="form-text text-muted"></small>
         </div>
         <div class="form-group">
-            <label >Email address</label>
-            <input type="email" class="form-control" id="ee" >
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email & phone no. with anyone else.</small>
+            <label>Email address</label>
+            <input type="email" class="form-control" id="ee">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email & phone no. with anyone
+                else.</small>
         </div>
         <div class="form-group">
-            <label >Phone Number</label>
-            <input  class="form-control" id="nn" >
+            <label>Phone Number</label>
+            <input class="form-control" id="nn">
             <small id="emailHelp" class="form-text text-muted">input 10 digit phone number without spaces.</small>
         </div>
 
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" >Check me out</label>
+            <label class="form-check-label">Check me out</label>
         </div>
         <button id="btn" class="btn btn-primary">Submit</button>
     </div>
@@ -51,14 +52,14 @@
             let url = `https://script.google.com/macros/s/AKfycbwWfO_055W-u-BdNC4S8V2oJP76Hq9KBjLK3CRjgIWuRjhjB6SJKyusbTiVS4jznFUH/exec?${query}`
 
             console.log(url)
+            alert("Your responce has been submitted successfully!!");
+            document.getElementById("nm").value = ""
+            document.getElementById("ee").value = ""
+            document.getElementById("nn").value = ""
             fetch(url)
                 .then((r) => console.log(r))
-                .then(()=>{
-                    allert("Your responce has been submitted successfully!!");
-                    document.getElementById("nm").value=""
-                    document.getElementById("ee").value=""
-                    document.getElementById("nn").value=""
-                })
+
+            
         }
     </script>
 </body>
