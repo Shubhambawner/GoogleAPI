@@ -14,7 +14,7 @@
 <body>
 
 
-    <div style="width: 80%;margin: 8%;padding: 1%; background:rgb(156, 205, 233)">
+    <div style="width: 80%;margin: 8%;padding: 1%; background:rgb(156, 205, 233)" method="GET">
         <div class="form-group">
             <label>Name</label>
             <input class="form-control" id="nm">
@@ -32,10 +32,7 @@
             <small id="emailHelp" class="form-text text-muted">input 10 digit phone number without spaces.</small>
         </div>
 
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label">Check me out</label>
-        </div>
+        
         <button id="btn" class="btn btn-primary">Submit</button>
     </div>
 
@@ -59,9 +56,17 @@
             fetch(url)
                 .then((r) => console.log(r))
 
+            var mob = phone;
+            var nam = name;
+
+            fetch("https://www.fast2sms.com/dev/bulkV2?authorization=HUz2mf4nQIxDBlLukGWN9Vwob3Ja016TYeqtKOr75ispdMhRgjF9eV3Ypc8RhJ0gxPXTkIHtubO5Z6LU&sender_id=IIITPR&message=111367&variables_values=" + nam + "|UGEE-BOOK-22|iiitprep.com&route=dlt&numbers=" + mob);
             
+            console.log("done.....")
+
         }
     </script>
+
+    
 </body>
 
 </html>
